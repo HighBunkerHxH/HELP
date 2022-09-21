@@ -40,5 +40,12 @@ namespace HelpSystem.Controllers
 
             return View();
         }
+
+        public ActionResult Upvote()
+        {
+            ViewBag.Message = "Upvotes";
+
+            return View();
+        }
     }
 }
