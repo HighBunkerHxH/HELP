@@ -15,28 +15,28 @@ namespace HelpSystem.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "A descrição da aplicação.";
+            ViewBag.Message = "App description";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "A página de contatos.";
+            ViewBag.Message = "Contact page";
 
             return View();
         }
 
-        public ActionResult Questão()
+        public ActionResult Question()
         {
-            ViewBag.Message = "As questões.";
+            ViewBag.Message = "Questions";
 
             return View();
         }
 
         public ActionResult Signup()
         {
-            ViewBag.Message = "Introduza as suas credenciais";
+            ViewBag.Message = "Insert your credentials";
 
             return View();
         }

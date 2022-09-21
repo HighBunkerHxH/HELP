@@ -124,7 +124,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\questões.cs" />
+    <Compile Include="Models\upvotesystem.cs" />
+    <Compile Include="Models\questions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +164,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Questão.cshtml" />
+    <Content Include="Views\Home\Question.cshtml" />
     <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Views\Home\Upvote.cshtml" />
   </ItemGroup>
