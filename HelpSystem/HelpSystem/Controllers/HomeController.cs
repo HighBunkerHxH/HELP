@@ -47,5 +47,17 @@ namespace HelpSystem.Controllers
 
             return View();
         }
+
+        public int up_vote
+        {
+            get;
+            set;
+        }
+
+        public int down_vote
+        {
+            get;
+            set;
+        }
     }
 }
