@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HelpSystem.Models
 {
-    public class questões
+    public class questions
     {
     }
 }
