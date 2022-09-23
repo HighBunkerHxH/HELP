@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<!doctype html>
+<html>
+<body>
+    <h2>Login</h2>
+    <div class="login-agileits-top">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <p>Email</p>
+            <input type="email" class="email" name="email" placeholder="Email" required="" />
+            <p>Password</p>
+            <input type="password" class="password" name="psw" placeholder="Password" required="" />
+            <input type="submit" value="Login">
+        }
+    </div>
+</body>
+</html>
