@@ -261,7 +261,34 @@
 </head>
 
 <body>
-    <div class=e42_695><div class="e42_697"></div><div class="e42_698"></div><span class="e42_699">Search</span><span class="e42_701">Help Desk </span><div class=e44_753><div class="e42_748"></div><span class="e44_752">Log in</span><div class="e42_749"></div><span class="e42_750">Sign up</span></div><div class="e42_747"></div><div class=e46_3><span class="e44_756">Don’t have an account? </span><span class="e46_2">Sign up</span></div><div class="e44_759"></div><span class="e44_764">Email</span><span class="e44_765">Passoword</span><div class=e44_768><div class="e44_766"></div><span class="e44_767">Log in</span></div><span class="e44_769">Forgot password?</span></div>
+    <div class=e42_695>
+        <div class="e42_697"></div>
+        <div class="e42_698"></div>
+        <span class="e42_699">Search</span>
+        <span class="e42_701">Help Desk </span>
+        <div class=e44_753>
+            <div class="e42_748"></div>
+            <span class="e44_752">Log in</span>
+            <div class="e42_749"></div>
+            <span class="e42_750">Sign up</span>
+        </div>
+
+        <div class="e42_747"></div>
+
+        <div class=e46_3>
+            <span class="e44_756">Don’t have an account? </span>
+            <span class="e46_2">Sign up</span>
+        </div>
+
+        <div class="e44_759"></div>
+        <span class="e44_764">Email</span>
+        <span class="e44_765">Password</span>
+        <div class=e44_768>
+            <div class="e44_766"></div>
+            <span class="e44_767">Log in</span>
+        </div>
+        <span class="e44_769">Forgot password?</span>
+    </div>
 </body>
 </html>
 
@@ -269,31 +296,56 @@
 
 
 
-@*<h2>Signup</h2>
+@*@{
+        ViewBag.Title = "Signup";
+    }
+
+    <h2>Signup</h2>
     <p>Please insert your credentials</p>
 
 
-        <div class="container">
+    <div class="container">
+        <form>
             <hr>
             <div>
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Insert your email" name="email" required>
+                <input type="text" value="" placeholder="Insert your email" name="email" required>
             </div>
             <div>
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Insert your password" name="psw" required>
+                <input type="password" value="" placeholder="Insert your password" name="psw" required>
             </div>
             <div>
                 <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat password" name="psw-repeat" required>
+                <input type="password" value="" placeholder="Repeat password" name="psw-repeat" required>
             </div>
 
             <p>When you create your account you must accept the <a href="#" style="color:dodgerblue">Terms and Conditions</a>.</p>
 
             <div class="clearfix">
-                <a class="nav-link" href="@Url.Action("Index","Home")"><button type="button" class="cancelbtn">Cancel</button></a>
-                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="button" id="cancel_btn">Cancel</button>
+                <button type="submit" id="signupbtn">Sign Up</button>
             </div>
-        </div>*@
+        </form>
+    </div>
+
+    <script>
+        let cancel = document.querySelector("#cancel_btn");
+        let signup = document.querySelector("#signupbtn");
+
+
+        cancel.addEventListener('click', function () {
+            window.open("Index", "_self");
+        });
+
+        signup.addEventListener('click', function () {
+            if (form.elements[i].value === '' && form.elements[i].hasAttribute('required')) {
+                alert('There are some required fields!');
+                return false;
+            } else {
+                window.open("Index", "_self");
+            }
+        });
+    </script>*@
 
 
