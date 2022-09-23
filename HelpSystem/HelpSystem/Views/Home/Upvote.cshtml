@@ -525,10 +525,10 @@
         }
 
         .e38_690 {
-            width: 49px;
+            width: 64px;
             height: 123px;
-            position: absolute;
-            left: 0px;
+            position: relative;
+            right: 20px;
             top: 0px;
         }
 
@@ -559,12 +559,25 @@
         }
 
         .e38_692 {
-            width: 49px;
-            height: 123px;
-            position: absolute;
+            width: 100%;
+            height: 50%;
+            position: relative;
             left: 0px;
-            top: 0px;
-            background-image: url(https://cdn.discordapp.com/attachments/638832341753790471/1022523183959642142/group_16_1.png);
+            bottom: 10px;
+            /*background-image: url(https://cdn.discordapp.com/attachments/638832341753790471/1022523183959642142/group_16_1.png);*/
+            background-image: url(https://cdn.discordapp.com/attachments/1022566994370887752/1022779988795195412/up.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .e38_693 {
+            width: 100%;
+            height: 50%;
+            position: relative;
+            left: 0px;
+            top: 10px;
+            /*background-image: url(https://cdn.discordapp.com/attachments/638832341753790471/1022523183959642142/group_16_1.png);*/
+            background-image: url(https://cdn.discordapp.com/attachments/1022566994370887752/1022779934764191794/down.png);
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -585,7 +598,7 @@
             width: 18px;
             height: 34px;
             position: absolute;
-            left: 14px;
+            left: 23px;
             top: 45px;
             font-family: Inter;
             text-align: center;
@@ -624,10 +637,71 @@
                     comments?
                 </span>
             </div>
-        </div><div class=e37_589><div class="e37_594"></div><span class="e37_599">Month</span></div><div class=e37_658><div class="e37_659"></div><span class="e37_660">Custom Filters</span></div><div class=e37_661><div class="e37_662"></div><span class="e37_663">Create a custom filter</span></div><div class=e37_675><div class=e38_690><div class="e38_692"></div></div><div class="e37_683"></div><span class="e37_684">5</span></div>
+        </div>
+        <div class=e37_589>
+            <div class="e37_594"></div>
+            <span class="e37_599">Month</span>
+        </div>
+        <div class=e37_658>
+            <div class="e37_659"></div>
+            <span class="e37_660">Custom Filters</span>
+        </div>
+        <div class=e37_661>
+            <div class="e37_662"></div>
+            <span class="e37_663">Create a custom filter</span>
+        </div>
+        <div class=e37_675>
+            <div class=e38_690>
+                <div class="e38_692" id="up_vote"></div>
+                <span class="e37_684" id="value">5</span>
+                <div class="e38_693" id="down_vote"></div>
+            </div>
+            <div class="e37_683"></div>
+        </div>
     </div>
 </body>
 </html>
+
+<script>
+    const actions = Array.from(document.querySelectorAll('[data_action]'));
+    let up_vote = document.querySelector("#up_vote");
+    let down_vote = document.querySelector("#down_vote");
+    let counter = localStorage.getItem("counter") || 0;
+
+
+    //actions.forEach(action => {
+    //    action.addEventListener('click', () => {
+    //        const action_name = action.dataset.action;
+
+    //        switch (action_name) {
+    //            case 'increase':
+    //                counter++;
+    //                break;
+    //            case 'decrease':
+    //                counter++;
+    //                break;
+    //        }
+
+
+    //    });
+    //});
+
+    //actions.forEach(action => {
+
+    //})
+    document.querySelector("#value").innerHTML = counter;
+
+    up_vote.addEventListener('click', function () {
+        counter++;
+        document.querySelector("#value").innerHTML = counter;
+    });
+
+    down_vote.addEventListener('click', function () {
+        counter--;
+        document.querySelector("#value").innerHTML = counter;
+    });
+
+</script>
 
 @*<form>
 <h2>Question to vote on</h2>
